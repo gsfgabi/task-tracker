@@ -233,22 +233,3 @@ php artisan test
 docker-compose up -d
 ```
 
-## 🤝 Contribuição
-
-1. Fork o projeto
-2. Crie uma branch para sua feature
-3. Commit suas mudanças
-4. Push para a branch
-5. Abra um Pull Request
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
-## 📞 Suporte
-
-Para dúvidas ou suporte, abra uma issue no repositório.
-
----
-
-**Desenvolvido com ❤️ usando Laravel e Vue.js**

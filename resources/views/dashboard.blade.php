@@ -1,53 +1,49 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Task Tracker - Dashboard</title>
-    
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Custom CSS -->
     <style>
-        .sidebar {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .dashboard-links {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 40px 30px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            text-align: center;
         }
-        .sidebar .nav-link {
-            color: rgba(255,255,255,0.8);
+        .dashboard-links a {
+            display: block;
+            margin: 20px 0;
+            font-size: 1.2rem;
+            padding: 12px;
             border-radius: 8px;
-            margin: 2px 0;
-            transition: all 0.3s ease;
+            background: #667eea;
+            color: #fff;
+            text-decoration: none;
+            transition: background 0.2s;
         }
-        .sidebar .nav-link:hover, .sidebar .nav-link.active {
-            color: white;
-            background: rgba(255,255,255,0.1);
-            transform: translateX(5px);
+        .dashboard-links a:hover {
+            background: #5a67d8;
         }
-        .card-stats {
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        .card-stats:hover {
-            transform: translateY(-5px);
-        }
-        .btn-action {
-            border-radius: 20px;
-            padding: 8px 16px;
-            font-size: 0.9rem;
-        }
-        .table-custom th {
-            background: #f8f9fa;
-            border: none;
-            font-weight: 600;
-            color: #495057;
-        }
-        .status-badge {
+    </style>
+</head>
+<body style="background: #f4f6fa;">
+    <div class="dashboard-links">
+        <h2 class="mb-4">Bem-vindo ao Task Tracker</h2>
+        <a href="{{ route('tasks.index') }}"><i class="bi bi-list-task me-2"></i> Tarefas</a>
+        <a href="{{ route('projects.index') }}"><i class="bi bi-folder me-2"></i> Projetos</a>
+        <a href="{{ route('reports.index') }}"><i class="bi bi-graph-up me-2"></i> Relatórios</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
             padding: 6px 12px;
             border-radius: 20px;
             font-size: 0.8rem;
